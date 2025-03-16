@@ -10,15 +10,14 @@
 
 	<packaging>jar</packaging>
 
+	<properties>
+		<properties.current.java.version>17</properties.current.java.version>
+		<maven.compiler.source>${properties.current.java.version}</maven.compiler.source>
+		<maven.compiler.target>${properties.current.java.version}</maven.compiler.target>
+	</properties>
+
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>org.codehaus.cargo</groupId>
-				<artifactId>codehaus-cargo</artifactId>
-				<scope>import</scope>
-				<type>pom</type>
-				<version>1.10.18</version>
-			</dependency>
 			<dependency>
 				<groupId>org.eclipse.jetty.ee10</groupId>
 				<artifactId>jetty-ee10</artifactId>
@@ -26,11 +25,55 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.gwtproject</groupId>
+				<artifactId>gwt</artifactId>
+				<scope>import</scope>
+				<type>pom</type>
+				<version>2.10.1</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
-
+		<dependency>
+			<groupId>org.gwtproject</groupId>
+			<artifactId>gwt-dev</artifactId>
+			<scope>provided</scope>
+			<exclusions>
+				<!--
+				CLASSPATH FIX
+				-->
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-annotations</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-continuation</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-servlet</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-servlets</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>apache-jsp</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.jetty.websocket</groupId>
+					<artifactId>websocket-client</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-webapp</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-client</artifactId>
@@ -71,7 +114,6 @@
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-session</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-ee</artifactId>
@@ -92,12 +134,11 @@
 			<groupId>org.eclipse.jetty.ee10</groupId>
 			<artifactId>jetty-ee10-annotations</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.codehaus.cargo</groupId>
 			<artifactId>cargo-core-container-jetty</artifactId>
+			<version>1.10.18</version>
 		</dependency>
-
 		<dependency>
 			<groupId>jakarta.el</groupId>
 			<artifactId>jakarta.el-api</artifactId>
@@ -122,7 +163,6 @@
 			<groupId>org.eclipse.jdt</groupId>
 			<artifactId>ecj</artifactId>
 		</dependency>
-
 	</dependencies>
 
 </project>
