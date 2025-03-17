@@ -11,7 +11,7 @@ import org.codehaus.cargo.util.log.LogLevel;
 import org.codehaus.cargo.util.log.Logger;
 import org.codehaus.cargo.util.log.SimpleLogger;
 
-public class Runner {
+public class RunnerEE8 {
 
 	public static void main(String[] args) throws Exception {
 
@@ -32,7 +32,7 @@ public class Runner {
 		);
 		configuration.setProperty( //
 				JettyPropertySet.DEPLOYER_EE_VERSION, //
-				"ee10" //
+				"ee8" //
 		);
 
 		final Jetty12xEmbeddedLocalContainer container = //
