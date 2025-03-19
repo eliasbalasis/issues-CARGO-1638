@@ -73,17 +73,32 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-client</artifactId>
-		</dependency>
+		<!--
+		Jetty
+		-->
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-http</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-xml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-session</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
@@ -99,36 +114,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-server</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-util</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-util-ajax</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-xml</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-session</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-ee</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty.ee8</groupId>
-			<artifactId>jetty-ee8-jndi</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty.ee8</groupId>
-			<artifactId>jetty-ee8-plus</artifactId>
-		</dependency>
+		<!--
+		Jetty EE
+		-->
 		<dependency>
 			<groupId>org.eclipse.jetty.ee8</groupId>
 			<artifactId>jetty-ee8-servlet</artifactId>
@@ -139,8 +129,15 @@
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty.ee8</groupId>
+			<artifactId>jetty-ee8-plus</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty.ee8</groupId>
 			<artifactId>jetty-ee8-annotations</artifactId>
 		</dependency>
+		<!--
+		Cargo
+		-->
 		<dependency>
 			<groupId>org.codehaus.cargo</groupId>
 			<artifactId>cargo-core-container-jetty</artifactId>
