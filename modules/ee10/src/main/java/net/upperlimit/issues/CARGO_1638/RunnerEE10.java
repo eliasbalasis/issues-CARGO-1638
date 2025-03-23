@@ -3,7 +3,6 @@ package net.upperlimit.issues.CARGO_1638;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import org.codehaus.cargo.container.jetty.Jetty12xEmbeddedLocalContainer;
 import org.codehaus.cargo.container.jetty.Jetty12xEmbeddedStandaloneLocalConfiguration;
 import org.codehaus.cargo.container.jetty.JettyPropertySet;
 import org.codehaus.cargo.container.property.ServletPropertySet;
@@ -40,8 +39,8 @@ public class RunnerEE10 {
 						RunnerEE10.class.getClassLoader() //
 				);
 
-		final Jetty12xEmbeddedLocalContainer container = //
-				new Jetty12xEmbeddedLocalContainer( //
+		final CustomJetty12xEmbeddedLocalContainer container = //
+				new CustomJetty12xEmbeddedLocalContainer( //
 						configuration //
 				);
 		final Logger containerLogger = new SimpleLogger();
