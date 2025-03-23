@@ -35,6 +35,11 @@ public class RunnerEE10 {
 				"ee10" //
 		);
 
+		Thread.currentThread() //
+				.setContextClassLoader( //
+						RunnerEE10.class.getClassLoader() //
+				);
+
 		final Jetty12xEmbeddedLocalContainer container = //
 				new Jetty12xEmbeddedLocalContainer( //
 						configuration //
